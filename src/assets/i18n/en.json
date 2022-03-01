@@ -2,6 +2,7 @@
   "title": "International",
   "body": {
     "welcome": "Welcome to International",
-    "subtitle": "The home of international code!"
+    "subtitle": "The home of international code!",
+    "select": "Select language"
   }
 }
