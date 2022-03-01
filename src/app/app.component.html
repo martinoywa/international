@@ -5,10 +5,17 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>International</title>
+  <title>{{ 'title' | translate }}</title>
 </head>
 <body>
-  <h1>Welcome to International</h1>
-  <p>The home of international code!</p>
+  <h1>{{ 'body.welcome' | translate }}</h1>
+  <p>{{ 'body.subtitle' | translate }}</p>
+
+  <label>
+    {{ 'body.select' | translate }}
+    <select #langSelect (change)="translate.use(langSelect.value)">
+      <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+    </select>
+  </label>
 </body>
 </html>
